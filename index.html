@@ -3,115 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spa de Uñas - Belleza y Cuidado</title>
+    <title>Diamante Rosa - Spa de Uñas</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff5f8;
+            background-color: #fff0f5;
             color: #333;
         }
-        header {
-            background: linear-gradient(to right, #ff69b4, #ff1493);
-            color: white;
-            text-align: center;
-            padding: 30px 10px;
-            font-size: 28px;
-            font-weight: bold;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-size: 26px;
+            margin: 0;
         }
         nav {
             display: flex;
-            justify-content: center;
-            background: #ff85c2;
-            padding: 15px;
+            align-items: center;
         }
         nav a {
-            color: white;
+            color: #333;
             text-decoration: none;
             padding: 15px 20px;
             font-size: 18px;
             transition: 0.3s;
+            position: relative;
         }
         nav a:hover {
-            background: #ff1493;
-            border-radius: 5px;
+            color: #ff1493;
         }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .gallery img {
-            width: 250px;
-            border-radius: 10px;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
+            border-radius: 10px;
+            z-index: 1;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+        .dropdown-content a {
+            color: #333;
+            padding: 12px;
+            display: block;
+            text-align: left;
         }
-        .footer {
-            background: #ff69b4;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
-        button {
-            background: #ff1493;
+        .btn {
+            background: linear-gradient(45deg, #ff1493, #ff85c2);
             color: white;
             border: none;
             padding: 12px 25px;
-            font-size: 20px;
+            font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        button:hover {
-            background: #d1117a;
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(255, 20, 147, 0.8);
+        }
+        .footer {
+            background-color: #ff85c2;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        .footer .social-icons img {
+            height: 40px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        🌸 Spa de Uñas - Belleza y Cuidado 🌸
-    </header>
-    <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    <div class="container">
-        <h2 id="servicios">Nuestros Servicios</h2>
-        <p>Transformamos tus uñas con los mejores diseños y tratamientos. ¡Déjanos consentirte!</p>
-        <button onclick="window.location.href='https://calendly.com/'">Reservar ahora</button>
-    </div>
-    <div class="container" id="galeria">
-        <h2>Galería</h2>
-        <div class="gallery">
-            <img src="https://source.unsplash.com/250x250/?nails,manicure" alt="Uñas decoradas">
-            <img src="https://source.unsplash.com/250x250/?spa,hands" alt="Spa de manos">
-            <img src="https://source.unsplash.com/250x250/?nailart,beauty" alt="Diseños creativos">
+    <header class="header">
+        <div class="logo">
+            <img src="https://i.imgur.com/qkKy8Wj.jpg" alt="Logo">
+            <h1>Diamante Rosa</h1>
         </div>
-    </div>
-    <div class="footer" id="contacto">
-        <h2>Contáctanos</h2>
-        <p>📍 Dirección: Calle 123, Ciudad, País</p>
-        <p>📞 Teléfono: +57 300 123 4567</p>
-        <p>📧 Email: contacto@spadeunas.com</p>
-    </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <div class="dropdown">
+                <a href="#servicios">Servicios ▼</a>
+                <div class="dropdown-content">
+                    <a href="#manicure">Manicure</a>
+                    <a href="#pedicure">Pedicure</a>
+                    <a href="#gel">Uñas en Gel</a>
+                    <a href="#acrilicas">Uñas Acrílicas</a>
+                </div>
+            </div>
+            <a href="#galeria">Galería</a>
+            <a href="#comentarios">Comentarios</a>
+            <a href="#registro">Registro</a>
+            <a href="#reservaciones">Reservaciones</a>
+            <a href="#maps">Ubicación</a>
+            <a href="#sedes">Sedes</a>
+            <div class="dropdown">
+                <a href="#politicas">Políticas ▼</a>
+                <div class="dropdown-content">
+                    <a href="#cancelaciones">Cancelaciones</a>
+                    <a href="#reembolsos">Reembolsos</a>
+                </div>
+            </div>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="btn">📌 Trabaja con Nosotros</button>
+    </header>
+
+    <footer class="footer">
+        <h2>Nuestras Sedes</h2>
+        <p>Dirección 1 - Dirección 2 - Dirección 3</p>
+        <h3>Atención al Cliente</h3>
+        <p>📞 310 3131956 | 📞 312 2178730</p>
+        <h3>Síguenos en Redes</h3>
+        <div class="social-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384067.png" alt="TikTok">
+        </div>
+    </footer>
 </body>
 </html>
-
 
