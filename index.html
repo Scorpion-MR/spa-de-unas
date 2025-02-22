@@ -4,109 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diamante Rosa - Spa de Uñas</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff0f5;
-            color: #333;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 60px;
-            margin-right: 15px;
-        }
-        .logo h1 {
-            font-size: 26px;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            padding: 15px 20px;
-            font-size: 18px;
-            transition: 0.3s;
-            position: relative;
-        }
-        nav a:hover {
-            color: #ff1493;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 180px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: #333;
-            padding: 12px;
-            display: block;
-            text-align: left;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .btn {
-            background: linear-gradient(45deg, #ff1493, #ff85c2);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 4px 15px rgba(255, 20, 147, 0.8);
-        }
-        .footer {
-            background-color: #ff85c2;
-            padding: 40px;
-            text-align: center;
-            color: white;
-            margin-top: 20px;
-        }
-        .footer .social-icons img {
-            height: 40px;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <img src="https://i.imgur.com/qkKy8Wj.jpg" alt="Logo">
-            <h1>Diamante Rosa</h1>
         </div>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
             <div class="dropdown">
                 <a href="#servicios">Servicios ▼</a>
                 <div class="dropdown-content">
@@ -117,27 +23,15 @@
                 </div>
             </div>
             <a href="#galeria">Galería</a>
-            <a href="#comentarios">Comentarios</a>
-            <a href="#registro">Registro</a>
             <a href="#reservaciones">Reservaciones</a>
-            <a href="#maps">Ubicación</a>
-            <a href="#sedes">Sedes</a>
-            <div class="dropdown">
-                <a href="#politicas">Políticas ▼</a>
-                <div class="dropdown-content">
-                    <a href="#cancelaciones">Cancelaciones</a>
-                    <a href="#reembolsos">Reembolsos</a>
-                </div>
-            </div>
+            <a href="https://maps.google.com" target="_blank">Ubicación</a>
             <a href="#contacto">Contacto</a>
         </nav>
-        <button class="btn">📌 Trabaja con Nosotros</button>
+        <button class="btn" onclick="window.location.href='https://forms.google.com'">📌 Trabaja con Nosotros</button>
     </header>
 
     <footer class="footer">
-        <h2>Nuestras Sedes</h2>
-        <p>Dirección 1 - Dirección 2 - Dirección 3</p>
-        <h3>Atención al Cliente</h3>
+        <h2>Atención al Cliente</h2>
         <p>📞 310 3131956 | 📞 312 2178730</p>
         <h3>Síguenos en Redes</h3>
         <div class="social-icons">
@@ -149,4 +43,3 @@
     </footer>
 </body>
 </html>
-
